@@ -27,8 +27,6 @@ if ( !defined( $opts{config} ) ) {
 	Usage:perl $0
 
 		-config               config file                               must be given
-		-dif                  ras dif                                   must be given
-		-p                    p value                                   must be given
 
 	Usage End.
 	exit;
