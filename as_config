@@ -1,0 +1,41 @@
+# This is the config file to do AS for the RNA-Seq data
+
+# DATE	2012-12-20
+#PERFORMER	chengc
+
+# the species
+SPECIES	human
+
+# the gff file
+GFF	/users/chengc/data/assource/hg18_knownGene_Final_sort_mRNA_addintron.gff
+
+# the fasta file
+FASTA	/users/chengc/data/assource/hg18.fa
+
+#whether to do the RAS step,if 0,exit;if 1 do the RAS step; default 1
+RAS	1
+
+#the in directory of the file
+INDIR	/data1/test/niujl/Programe/MTA1_116_2012_12_12/JCFX_12_12/
+
+#the sample junctions file and sample sam file and sample name,the file and the name are separated by colon
+SAMPLE1	two_times_MTA1_116_mRNA.fq.clean_fq_1212/junctions.bed:two_times_MTA1_116_mRNA.fq.clean_fq_1212/accepted_hits.sam.uniq:116
+SAMPLE2	two_times_MTA1_siMTA1_mRNA.fq.clean_fq_1212/junctions.bed:two_times_MTA1_siMTA1_mRNA.fq.clean_fq_1212/accepted_hits.sam.uniq:siMTA1
+
+
+#the comparing group to do RAS, the group name is the sample file name,the group names are separated by colon
+GROUP1	siMTA1:116
+#GROUP2	Leaf:Root
+#GROUP3	Flower:Root
+#GROUP4	P_M:P_S
+#GROUP5	P_L:P_M
+#GROUP6	W_M:W_S
+#GROUP7	W_L:W_M
+
+#the comparing group to find co-RAS
+#CORAS1	P_L_W_L:P_M_W_M
+#CORAS2	P_M_W_M:P_S_W_S
+
+#the out directory of the result,please input the absolute path(start with "/")
+
+OUTDIR	/users/chengc/data/MTA1/AS/
